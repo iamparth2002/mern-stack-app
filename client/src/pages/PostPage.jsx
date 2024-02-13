@@ -12,7 +12,7 @@ const PostPage = () => {
   const { userInfo, setUserInfo } = useContext(UserContext);
 
   useEffect(() => {
-    fetch(`http://localhost:4000/api/post/${params.id}`).then((response) => {
+    fetch(`https://mern-stack-app-beta.vercel.app/api/post/${params.id}`).then((response) => {
       response.json().then((post) => {
         setPost(post);
       });
@@ -22,7 +22,7 @@ const PostPage = () => {
     const ans = window.confirm('Are you sure you want to delete this post?');
 
     if (ans) {
-      const response = await fetch(`http://localhost:4000/api/post/${params.id}`, {
+      const response = await fetch(`https://mern-stack-app-beta.vercel.app/api/post/${params.id}`, {
         method: 'DELETE',
       });
       if (response.ok) {
