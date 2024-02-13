@@ -4,7 +4,7 @@ import Post from '../components/Post';
 const HomePage = () => {
   const [posts, setPosts] = useState([]);
   useEffect(() => {
-    fetch('http://localhost:4000/api/post').then((response) => {
+    fetch('https://mern-stack-app-beta.vercel.app/api/post').then((response) => {
       response.json().then((posts) => {
         setPosts(posts);
       });
