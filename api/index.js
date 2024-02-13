@@ -19,7 +19,7 @@ const secret = 'iamparth2002';
 const bucket = 'parth-blog-app';
 
 dotenv.config();
-app.use(cors({ credentials: true, origin: 'http://localhost:3000' }));
+app.use(cors({ credentials: true, origin: 'https://mern-stack-app-beta.vercel.app/' }));
 app.use(express.json());
 app.use(cookieParser());
 
